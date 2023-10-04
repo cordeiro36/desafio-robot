@@ -16,6 +16,6 @@ Inserir o comando "robot -d ./backend/logs ./backend/tests" para executar o proj
 
 Inserir o comando "robot -d ./frontend/logs ./frontend/tests" para executar o projeto de Frontend
 
-**Requisitos para instalação**
+**Logs da execução**
 
 Os logs podem ser vizualizados dentro das pastas /backend/logs e /frontend/logs respectivamente
