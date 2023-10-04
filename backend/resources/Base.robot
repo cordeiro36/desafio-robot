@@ -2,7 +2,6 @@
 
 Library    RequestsLibrary
 
-#Resource    Helpers.robot
 Resource    routes/GerarPessoa.robot
 Resource    routes/ValidarCPF.robot
 

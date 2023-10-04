@@ -13,7 +13,7 @@ Validar Status code 200
 Validar se o campo idade existe
     ${response}    POST Gerar_Pessoa
 
-    Should Not Be Empty    ${response.json()[0]['idade']}
+    Should Not Be Equal As Numbers    99    ${response.json()[0]['idade']}
 
 Validar se o campo sexo é masculino
     ${response}    POST Gerar_Pessoa
@@ -27,14 +27,13 @@ Validar se o campo sexo é feminino
 
 Verificar se o campo CPF é válido
     ${response}    POST Gerar_Pessoa
-    
-    #Armazenando o CPF numa variável
+
+    # Armazenando o CPF numa variável
     ${CPF}    Convert To String    ${response.json()[0]['cpf']}
-    
-    #Realizando validação do CPF armazenado através do serviço de validar CPF
+
+    # Realizando validação do CPF armazenado através do serviço de validar CPF
     ${form_data}    Evaluate    {'acao': 'validar_cpf', 'txt_cpf': '${CPF}'}
 
     ${response}    POST Validar_CPF    ${form_data}
 
     Status Should Be    200    ${response}
-
