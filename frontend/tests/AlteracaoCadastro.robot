@@ -1,5 +1,5 @@
 *Settings*
-Documentation    New User Test
+Documentation    Edit User Test
 
 Resource    ${EXECDIR}/frontend/resources/Base.robot
 

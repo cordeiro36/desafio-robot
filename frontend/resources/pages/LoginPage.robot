@@ -17,13 +17,17 @@ ${TXT_FIRSTNAME}    css=input[placeholder='First Name']
 *** Keywords ***
 Dado que acesso o site
     Wait For Elements State    ${TXT_USERNAME}    visible    10
+    Take Screenshot
 
 E realizo o login "${USERNAME}""${PASSWORD}"
     Fill Text                  ${TXT_USERNAME}    ${USERNAME}
     Fill Text                  ${TXT_PASSWORD}    ${PASSWORD}
     Click                      ${BTN_LOGIN}
     Wait For Elements State    ${IMG_LOGO}    visible    10
+    Take Screenshot    
+
 
 E acesso a opacao My Info
     Click    ${LBL_MYINFO}
     Wait For Elements State    ${IMG_LOGO}    visible    10
+    Take Screenshot    

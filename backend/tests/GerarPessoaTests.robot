@@ -37,3 +37,5 @@ Verificar se o campo CPF é válido
     ${response}    POST Validar_CPF    ${form_data}
 
     Status Should Be    200    ${response}
+
+    

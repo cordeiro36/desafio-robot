@@ -18,22 +18,24 @@ ${TOAST_SUCCESS}                xpath=//div[@id='oxd-toaster_1']
 E altero o nome "${FIRSTNAME}"
     Clear Text    ${TXT_FIRSTNAME}
     Fill Text     ${TXT_FIRSTNAME}    ${FIRSTNAME}
-
+    Take Screenshot    
 
 E anexo um documento
 
     Click                          ${BTN_ADD}
     ${PROMISSE}    Promise To Upload File    ${FILE}
     Click                          ${BTN_UPLOAD}
-
+    Take Screenshot    
 
 
 Quando clico em salvar
 
     Click            ${BTN_SAVE_PERSONALDETAILS}
+    Take Screenshot
     Click            ${BTN_SAVE_UPLOAD}
-
+    Take Screenshot    
 
 Então é exibida uma mensagem de sucesso
 
     Wait For Elements State    ${TOAST_SUCCESS}   visible    10
+    Take Screenshot    
